@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Prediction</title>
+  
+</head>
+
+<body>
+  <div id="loading" ></div>
+  <div id="content">
+  <nav class="navbar navbar-dark bg-primary">
+    <div id="mySidebar" class="sidebar bg-primary">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+      <a href="http://127.0.0.1:5000/about" onclick="openAbout()"><i class="fas fa-users"></i> About</a>
+      <a href="http://127.0.0.1:5000/" onclick="openProject()"><i class="fas fa-file-code"></i> Project</a>
+      <a href="http://127.0.0.1:5000/team" onclick="openTeam()"><i class="fas fa-users"></i> Team</a>
+      
+    </div>
+    <button class="openbtn" onclick="openNav()" style="position:absolute; left:2%; top: 15%;">☰</button> 
+    <a class="navbar-brand mx-auto" href="#">Prediction</a>
+
+  </nav>
+  <div class="section-container mt-4">
+    <section class="upload-container">
+     
+    </section>
+    <div class="upload-vector">
+        
+     
+      
+      <h4 class="progress-label-left">Fake</h4>
+      <h4 class="progress-label-right">Real</h4>
+      
+       <h5 style="position: absolute;top:67%;left:47%;">{{ value }}</h5>
+      <div class="progress-50 progress-bar progress-100"  id="progress"></div>
+         
+      </div>
+       
+    </div> 
+    </div>
+    
+    </div>
+  </div>
+ 
+  <script>
+    if({{value}}==-1){
+      console.log("Poor Lighting");
+      alert("Poor Lighting");
+      window.location="http://127.0.0.1:5000/";
+    }
+    else if({{value}}==-2){
+      console.log("No Faces");
+      alert("No faces detected");
+      window.location="http://127.0.0.1:5000/";
+    }
+    else{
+      var g = document.createElement("progress");
+      val={{ value }};
+      g.setAttribute("value", val);
+      console.log(val);
+      g.setAttribute("max", "100");
+      document.getElementById("progress").appendChild(g);
+    }
+    function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function openTeam(){
+  location.href("http://127.0.0.1:5000/team");
+}
+function openAbout(){
+  location.href("http://127.0.0.1:5000/about");
+}
+function openProject(){
+  location.href("http://127.0.0.1:5000/");
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+  </script>
+  <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

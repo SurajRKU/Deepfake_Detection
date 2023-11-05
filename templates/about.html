@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary" style="height: 8%">
+        <div id="mySidebar" class="sidebar bg-primary">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+          <a href="http://127.0.0.1:5000/" onclick="openProject()"><i class="fas fa-file-code"></i> Project</a>
+          <a href="http://127.0.0.1:5000/team" onclick="openTeam()"><i class="fas fa-users"></i> Team</a>
+        </div>
+        <div id="main">
+          <button class="openbtn" onclick="openNav()" style="position:absolute; left:2%; top: 15%;">☰</button> 
+        <a class="navbar-brand mx-auto" href="#" style="position:absolute; left:46%; top: 13%;">About the Project</a>
+      </nav>
+       <div onclick="closeNav()">
+    </div>
+        <h3 style="font-family: 'Times New Roman', Times, serif;font-size: x-large;position: relative;left: 45%;top: 3%;">Deepfake Detection</h3>
+        <p class="para">Deepfakes   are   images   or   videos   that   are   synthetically   manipulated   or generated  using  deep  learning.  The  term  deepfake  to  refer  to  both  media manipulation  and  media generation  through  deep  learning.  It  is  sometimes used for “face swaps,” “expression or attribute manipulation,” and even for images entirely synthesized by a deep learning algorithm.Though it’s possible for humans to detect deepfakes, it’s getting harder as the general quality increases. Moreover, as it gets easier and faster to create high quality  deepfakes,  the  volume  of  deepfake  content  may  be  too  great  for human detection alone. That’s why we may need to rely on algorithms to determine  whether  a  piece  of  content  is  a  deepfake  or  not.  Fortunately, deepfake  detection  research  is  ongoing,  and  offers  numerous  potential benefits. Not only are algorithms automatic, they can also potentially detect cues that are hard for humans to find on their own. Onevariant  of  the  deep  networks is deep autoencoders, which have been widely applied for dimensionality  reduction  and  image  compression.</p>
+        <p class="para">In  this  work,  we  have  implemented image  comparison  metrics  and neural architectures  that  use  convolutions  to detect features  that  can  be  used  to classify videos into fake or real.This is done in a sequence of steps. First, frames from the video are extracted. Then, these frames are passes as an input to the face extraction module. The face extraction module crops faces from the frames. These cropped faces are then  passed to the architecture which applies the knowledge it has learned from the training proces and classifies the video into real or fake. The  quality  of  the detection can  be  improved  by  training  the  model for more epochs and fine tuning the process for higher resolution. In our future work  we  look  to train  our  model  on  samples  from  multiple  datasets.  The datasets  available  are  CelebDF,  Face2Face,  FaceForensics.  We  would  also want to explore and compare metrics such as intradataset performance and cross   dataset   performance.   </p>      
+        <image class="image" src="../static/video_play.jpg"></image>
+        <image class="image" src="../static/arrow_icon.png" style="width: 6%;height: 10%;"></image>
+        <image class="image" style="height:15%;" src="../static/frames.jpg"></image>
+        <image class="image" src="../static/arrow_icon.png" style="width: 6%;height: 10%;"></image>
+        <image class="image" style="height:15%;" src="https://media.giphy.com/media/IsKFVXvVxyeN1aXfgj/giphy.gif"></image>
+        <image class="image" src="../static/arrow_icon.png" style="width: 6%; height: 10%;"></image>
+        <image class="image" src="../static/network.svg"></image>
+        <image class="image" src="../static/arrow_icon.png" style="width: 5%; height: 10%;"></image>
+        <h5 style="position: absolute; left: 88%;top:77%;">Real or Fake</h5>
+      </div>
+      <script>
+            function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function openProject(){
+  location.href("http://127.0.0.1:5000/");
+}
+function openTeam(){
+    location.href("http://127.0.0.1:5000/team");
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+      </script>
+  </body>

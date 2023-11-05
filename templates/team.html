@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Team</title>
+  </head>
+  <body >
+    
+    <nav class="navbar navbar-dark bg-primary" style="height: 8%">
+        <div id="mySidebar" class="sidebar bg-primary">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+          <a href="http://127.0.0.1:5000/about" onclick="openAbout()"><i class="fa fa-info-circle"></i> About</a>
+          <a href="http://127.0.0.1:5000/" onclick="openProject()"><i class="fas fa-file-code"></i> Project</a>
+        </div>
+        <div id="main">
+          <button class="openbtn" onclick="openNav()" style="position:absolute; left:2%; top: 15%;">☰</button> 
+        <a class="navbar-brand mx-auto" href="#" style="position:absolute; left:47%; top: 13%;">Team</a>
+      </nav>
+      <div onclick="closeNav()">
+    <img class="cover" src="../static/suraj.jpeg" style="width:11%;height:30%;top:12%;left:18%">
+    <div class="cover" >
+      <h5  style="position:absolute;top:10%;left:47%;">Suraj R</h5>
+      <h6  style="position:absolute;top:30%;left:47%;">8618181045</h6>
+      <h6 style="position:absolute;top:50%;left:47%;">surajr.kumart@gmail.com</h6>
+    </div>
+    <img class="cover" src="../static/Photo.JPG" style="width:11%;height:30%;top:12%;left:54.5%">
+    <div class="cover" style="width:29%;left:820px;" >
+      <h5  style="position:absolute;top:10%;left:45%;">Syed Hazim</h5>
+      <h6  style="position:absolute;top:30%;left:45%;">8792270918</h6>
+      <h6 style="position:absolute;top:50%;left:45%;">samzimraz16.sh@gmail.com</h6>
+    </div>
+    <img class="cover" src="../static/chithranjan.jpeg" style="width:11%;height:30%;top:62%;left:18%">
+    <div class="cover" style="top:60%;">
+      <h5  style="position:absolute;top:10%;left:47%;">Chithranjan</h5>
+      <h6  style="position:absolute;top:30%;left:47%;">91135674445</h6>
+      <h6 style="position:absolute;top:50%;left:47%;">kumarchithranjan@gmail.com</h6>
+    </div>
+    <img class="cover" src="../static/ravi.jpeg" style="width:11%;height:30%;top:62%;left:54.5%">
+    <div class="cover" style="top:60%;left:820px;">
+        <h5  style="position:absolute;top:10%;left:49%;">Ravi</h5>
+        <h6  style="position:absolute;top:30%;left:49%;">9964148560</h6>
+        <h6 style="position:absolute;top:50%;left:49%;">ravicv2000cv@gmail.com</h6>
+    </div>
+</div>
+    <script>
+         function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function openProject(){
+  location.href("http://127.0.0.1:5000/");
+}
+function openAbout(){
+    location.href("http://127.0.0.1:5000/about");
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+    </script> 
+   
+  </body>
