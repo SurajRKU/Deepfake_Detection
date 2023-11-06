@@ -28,11 +28,11 @@ In order to cater for different video qualities and to optimize for the image pr
 • Resize all the frames to the same aspect ratio<br />
 • Save the newly scaled image in png format as shown in the below Figure<br />
 
-<img src="https://github.com/SurajRKU/Deepfake-Detection/blob/main/extracted_frames_sample.png" width="500" />
+<img src="https://github.com/SurajRKU/Deepfake_Detection/blob/main/Extracted_frames_sample.png" width="500" />
 
 #### Data Preprocessing Step 2 - Extract faces from the frames with MTCNN
 We use MTCNN to extract the faces from the frames. MTCNN model is used to detect faces with certain confidence levels. If the confidence level is significant enough, it draws a bounding box around the detected face, crops it and saves it as a .png image format as shown in the below figure.<br />
-<img src="https://github.com/SurajRKU/Deepfake-Detection/blob/main/Extracted_faces_from_frames.png" width="500" />
+<img src="https://github.com/SurajRKU/Deepfake_Detection/blob/main/Extracted_faces_from_frames.png" width="500" />
 
 #### Step 3 - Splitting the data into training, testing and validation sets 
 Here Metadata is used to extract the label associated with each video. Based on this extracted label, we move the extracted faces to two directories namely “fake” and “real” and split the data in “fake” and “real” directories into training, testing and validation sets in the ratio 8:1:1. 
