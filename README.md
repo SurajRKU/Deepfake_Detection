@@ -1,6 +1,6 @@
 # About
 
-This project involves building and training a deep learning-based deepfake detection model using [Python](https://www.python.org), [Keras](https://keras.io) and [TensorFlow](https://www.tensorflow.org). The proposed deepfake detector is based on the state-of-the-art ResNet50 architecture initialzed with pretrained ImageNet weights and trained against a massive, comprehensive set of deepfake datasets employing transfer learning approach. 
+This project involves building and training a deep learning-based deepfake detection model using [Python](https://www.python.org), [Keras](https://keras.io) and [TensorFlow](https://www.tensorflow.org). The proposed deepfake detector is based on the state-of-the-art ResNet50 architecture initialized with pretrained ImageNet weights and trained against a massive, comprehensive set of deepfake datasets employing transfer learning approach. 
 
 
 https://github.com/SurajRKU/Deepfake_Detection/assets/53537228/9abbdda8-33ed-4ad9-8a12-536ff78f0d9b
